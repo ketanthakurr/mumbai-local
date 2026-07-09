@@ -1,0 +1,129 @@
+{
+  "Metadata": {
+    "title": "Mumbai Local · Cuisine indienne",
+    "brand": "Mumbai Local",
+    "description": "L'échoppe de rue rencontre le train de banlieue. Les classiques de Bombay — butter chicken, pav bhaji, thalis — servis brûlants, tout droit du quai."
+  },
+  "Nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "language": "Langue",
+    "menu": "Ouvrir le menu",
+    "close": "Fermer le menu"
+  },
+  "Hours": {
+    "mon": "Lundi",
+    "tueFri": "Mar – Ven",
+    "sat": "Samedi",
+    "sun": "Dimanche",
+    "closed": "Fermé"
+  },
+  "Tags": {
+    "veg": "Végé",
+    "mild": "Doux",
+    "hot": "Épicé",
+    "veryHot": "Très épicé",
+    "signature": "Signature"
+  },
+  "Footer": {
+    "blurb": "Une cuisine de rue de Bombay sur un quai berlinois. Venez affamés, repartez au prochain train.",
+    "explore": "Explorer",
+    "hours": "Horaires",
+    "find": "Nous trouver",
+    "rights": "Tous droits réservés.",
+    "made": "Cuisiné frais · मुंबई लोकल"
+  },
+  "CTA": {
+    "eyebrow": "Le quai n°1 embarque",
+    "title": "Réservez avant l'affluence",
+    "body": "Les week-ends se remplissent vite. Réservez en ligne ou appelez la cuisine — on garde le chai au chaud.",
+    "reserve": "Réserver une table",
+    "call": "Nous appeler"
+  },
+  "Home": {
+    "ticker": "Plats et prix du jour",
+    "hero": {
+      "eyebrow": "De Bombay à Berlin",
+      "line1": "Le Vrai Bombay",
+      "line2": "Cuisine de Rue",
+      "sub": "Rapide, animé, plein de saveurs — la cuisine qu'on avale entre deux trains à Churchgate, dressée pour prendre son temps.",
+      "ctaMenu": "Voir la carte",
+      "ctaReserve": "Réserver une table",
+      "scroll": "Défiler"
+    },
+    "signature": {
+      "eyebrow": "Plats signature",
+      "title": "Tout droit du tawa"
+    },
+    "menu": {
+      "eyebrow": "Le tableau",
+      "title": "Toutes les lignes du menu",
+      "intro": "Six quais, une cuisine. Choisissez une catégorie et suivez la saveur — niveaux d'épices indiqués, prix en euros.",
+      "platform": "Quai"
+    },
+    "spotlight": {
+      "eyebrow": "Spécialité maison",
+      "title": "Le Thali. Toutes les lignes, une assiette.",
+      "body": "Indécis ? Parcourez tout le réseau. Un assortiment tournant de dal, paneer, curry, riz, sabji et chutney — tout Mumbai Local en quinze petits bols.",
+      "stat1": { "value": "15", "label": "Katoris par thali" },
+      "stat2": { "value": "12h", "label": "Viandes longuement marinées" },
+      "stat3": { "value": "40+", "label": "Plats au tableau" }
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "À propos",
+      "description": "L'histoire de Mumbai Local — une cuisine de rue de Bombay qui sert les classiques indiens depuis un quai berlinois."
+    },
+    "eyebrow": "L'histoire",
+    "title": "Du Local de 8h12",
+    "intro": "Mumbai Local est né d'un souvenir : l'odeur du pav bhaji flottant sur un quai bondé à l'heure de pointe. Ce souvenir, nous l'avons mis dans l'assiette.",
+    "storyTitle": "Né sur un quai bondé",
+    "story1": "Les trains de banlieue de Mumbai transportent des millions de gens chaque jour, et chaque gare a son échoppe — le vendeur de vada pav, le chaiwala et son cutting-chai, le comptoir de poha épuisé dès neuf heures. Cette énergie est l'idée même de notre cuisine.",
+    "story2": "Nous cuisinons les classiques comme au pays : épices moulues fraîches, viandes marinées toute la nuit, sans raccourcis. Puis on les pose sur une vraie table, à un rythme tranquille — les saveurs du quai, sans la cohue.",
+    "quote": "Venez affamés, repartez au prochain train.",
+    "quoteBy": "— La cuisine de Mumbai Local",
+    "lineEyebrow": "La ligne",
+    "lineTitle": "Le trajet de votre repas",
+    "stop1": { "title": "Sourcé", "body": "Épices et lentilles du nord de l'Inde, produits du marché le matin même." },
+    "stop2": { "title": "Mariné", "body": "Les viandes reposent jusqu'à douze heures pour que le masala atteigne l'os." },
+    "stop3": { "title": "Saisi", "body": "Cuisiné à la commande à feu vif — comme le fait une échoppe de rue." },
+    "stop4": { "title": "Servi", "body": "Dressé bien chaud avec basmati, salade, papadam et chutney." },
+    "value1": { "title": "Vraies épices", "body": "Chaque masala est moulu maison. Les niveaux de piment sont indiqués pour choisir la bonne ligne." },
+    "value2": { "title": "Assiettes généreuses", "body": "Des portions à partager — thalis, biryanis et pains faits pour circuler." },
+    "value3": { "title": "Le végé d'abord", "body": "La moitié du tableau est végétarienne ou végane, et jamais par défaut." }
+  },
+  "Contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Réservez une table chez Mumbai Local, consultez nos horaires, adresse et numéro de téléphone."
+    },
+    "eyebrow": "Trouver le quai",
+    "title": "Réserver une Table",
+    "intro": "Réservez en ligne en moins d'une minute, ou appelez directement la cuisine. Sans réservation aussi, tant qu'il reste une place.",
+    "formTitle": "Demande de réservation",
+    "formIntro": "Dites-nous quand et combien — nous confirmons par e-mail.",
+    "address": "Adresse",
+    "directions": "Itinéraire",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "hoursTitle": "Horaires d'ouverture",
+    "openMaps": "Ouvrir dans Maps",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "E-mail",
+      "emailError": "Saisissez une adresse e-mail valide.",
+      "date": "Date",
+      "guests": "Convives",
+      "message": "Message",
+      "messagePlaceholder": "Allergies, chaise haute, table près de la fenêtre…",
+      "submit": "Demander une table",
+      "required": "Ce champ est obligatoire.",
+      "sentTitle": "Demande reçue",
+      "sentBody": "Merci — nous confirmons votre table par e-mail sous peu. Le quai n°1 vous attend.",
+      "another": "Envoyer une autre demande"
+    }
+  }
+}

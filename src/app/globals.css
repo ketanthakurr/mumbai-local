@@ -1,26 +1,254 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Mumbai Local — "Mumbai Nights"
+   Neon street-signage · image-forward · interactive.
+   ============================================================ */
+
+@theme {
+  /* Base */
+  --color-ink: #08080c;
+  --color-ink-2: #0e0e15;
+  --color-ink-3: #16161f;
+  --color-line: #23232e;
+
+  /* Neon accents */
+  --color-magenta: #ff2e88;
+  --color-magenta-deep: #c50e5f;
+  --color-cyan: #1ff0d0;
+  --color-marigold: #ffb020;
+  --color-chili: #ff4d3d;
+  --color-jade: #46e08a;
+
+  /* Neutrals */
+  --color-paper: #f4ecdb;
+  --color-bone: #f3f0ea;
+  --color-smoke: #9a9aa8;
+
+  /* Fonts — two Latin faces only (display + body), plus Devanagari for Hindi.
+     `--font-mono` intentionally reuses the body face so numeric/label text
+     stays in one family; tabular-nums keeps prices aligned. */
+  --font-display: var(--font-big-shoulders);
+  --font-body: var(--font-instrument);
+  --font-mono: var(--font-instrument);
+  --font-deva: var(--font-baloo);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  border-color: var(--color-line);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-magenta);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---- Type helpers ---- */
+.font-display {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+.font-deva {
+  font-family: var(--font-deva), sans-serif;
+}
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Neon ---- */
+.neon-magenta {
+  color: #ff5ba3;
+  text-shadow:
+    0 0 2px #fff6fb,
+    0 0 10px var(--color-magenta),
+    0 0 26px var(--color-magenta),
+    0 0 48px var(--color-magenta-deep);
+}
+.neon-cyan {
+  color: #b6fff4;
+  text-shadow:
+    0 0 2px #fff,
+    0 0 10px var(--color-cyan),
+    0 0 26px var(--color-cyan);
+}
+.neon-marigold {
+  color: #ffd88a;
+  text-shadow:
+    0 0 2px #fff8ec,
+    0 0 10px var(--color-marigold),
+    0 0 28px var(--color-marigold);
+}
+/* Glowing tube border */
+.neon-tube {
+  border: 1px solid color-mix(in srgb, var(--color-magenta) 55%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-magenta) 20%, transparent),
+    0 0 18px -2px color-mix(in srgb, var(--color-magenta) 55%, transparent),
+    inset 0 0 22px -8px color-mix(in srgb, var(--color-magenta) 60%, transparent);
+}
+.neon-tube-cyan {
+  border: 1px solid color-mix(in srgb, var(--color-cyan) 50%, transparent);
+  box-shadow:
+    0 0 18px -3px color-mix(in srgb, var(--color-cyan) 50%, transparent),
+    inset 0 0 22px -10px color-mix(in srgb, var(--color-cyan) 60%, transparent);
+}
+
+/* Sign flicker on load */
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  41% { opacity: 1; }
+  42% { opacity: 0.35; }
+  43% { opacity: 1; }
+  45% { opacity: 0.5; }
+  46% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.4; }
+  94% { opacity: 1; }
+}
+.flicker {
+  animation: neon-flicker 3.2s var(--ease-out-expo) 0.2s 1 both;
+}
+.flicker-slow {
+  animation: neon-flicker 5s linear infinite;
+}
+
+/* ---- Glass / cards ---- */
+.glass {
+  background: color-mix(in srgb, var(--color-ink-2) 78%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid color-mix(in srgb, #fff 8%, transparent);
+}
+
+/* ---- Gradient text ---- */
+.text-gradient {
+  background: linear-gradient(100deg, var(--color-magenta), var(--color-marigold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---- Atmosphere: grain + scanlines ---- */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: radial-gradient(
+    color-mix(in srgb, #fff 5%, transparent) 0.5px,
+    transparent 0.5px
+  );
+  background-size: 4px 4px;
+}
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0 2px,
+    rgba(0, 0, 0, 0.16) 2px 3px
+  );
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+}
+
+/* Perforated ticket edge */
+.perf-top {
+  mask-image: radial-gradient(circle at 8px 0, transparent 6px, black 6.5px);
+  mask-size: 16px 100%;
+  mask-repeat: repeat-x;
+}
+
+/* ---- Footer street scene ---- */
+@keyframes ml-drive {
+  from { transform: translateX(-16vw); }
+  to { transform: translateX(112vw); }
+}
+@keyframes ml-bob {
+  0%, 100% { transform: translateY(0) rotate(-0.5deg); }
+  50% { transform: translateY(-2px) rotate(0.5deg); }
+}
+.ml-vehicle {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  animation: ml-drive var(--dur, 18s) linear infinite;
+  animation-delay: var(--delay, 0s);
+  will-change: transform;
+}
+.ml-vehicle > * {
+  animation: ml-bob 0.45s ease-in-out infinite;
+}
+
+/* ---- Marquee ---- */
+@keyframes ml-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: ml-marquee 34s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ---- Link sweep ---- */
+.link-sweep {
+  background-image: linear-gradient(var(--color-cyan), var(--color-cyan));
+  background-size: 0% 1.5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.35s var(--ease-out-expo);
+}
+.link-sweep:hover,
+.link-sweep[data-active="true"] {
+  background-size: 100% 1.5px;
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track { animation: none; transform: none; }
+  .flicker, .flicker-slow { animation: none; }
+  /* Park the footer vehicles in view instead of off-screen. */
+  .ml-vehicle { animation: none; }
+  .ml-vehicle > * { animation: none; }
+  .ml-vehicle.park-1 { transform: translateX(22vw); }
+  .ml-vehicle.park-2 { transform: translateX(64vw); }
 }

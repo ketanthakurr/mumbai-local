@@ -1,0 +1,129 @@
+{
+  "Metadata": {
+    "title": "Mumbai Local · Indian Food",
+    "brand": "Mumbai Local",
+    "description": "Street-food-stall meets suburban railway. Bombay classics — butter chicken, pav bhaji, thalis — served hot off the platform."
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "language": "Language",
+    "menu": "Open menu",
+    "close": "Close menu"
+  },
+  "Hours": {
+    "mon": "Monday",
+    "tueFri": "Tue – Fri",
+    "sat": "Saturday",
+    "sun": "Sunday",
+    "closed": "Closed"
+  },
+  "Tags": {
+    "veg": "Veg",
+    "mild": "Mild",
+    "hot": "Spicy",
+    "veryHot": "Very hot",
+    "signature": "Signature"
+  },
+  "Footer": {
+    "blurb": "A Bombay street kitchen on a Berlin platform. Come hungry, leave on the next train.",
+    "explore": "Explore",
+    "hours": "Hours",
+    "find": "Find us",
+    "rights": "All rights reserved.",
+    "made": "Cooked fresh · मुंबई लोकल"
+  },
+  "CTA": {
+    "eyebrow": "Platform No.1 is boarding",
+    "title": "Grab a table before the rush",
+    "body": "Weekends fill up fast. Reserve online or call the kitchen — we'll keep the chai warm.",
+    "reserve": "Reserve a table",
+    "call": "Call us"
+  },
+  "Home": {
+    "ticker": "Today's dishes and prices",
+    "hero": {
+      "eyebrow": "Bombay to Berlin",
+      "line1": "Real Bombay",
+      "line2": "Street Food",
+      "sub": "Fast, loud, full of flavour — the food you'd eat between trains at Churchgate, plated for the long stay.",
+      "ctaMenu": "See the menu",
+      "ctaReserve": "Reserve a table",
+      "scroll": "Scroll"
+    },
+    "signature": {
+      "eyebrow": "Signature dishes",
+      "title": "Straight off the tawa"
+    },
+    "menu": {
+      "eyebrow": "The board",
+      "title": "Every line on the menu",
+      "intro": "Six platforms, one kitchen. Tap a category and follow the flavour — spice levels marked, prices in euro.",
+      "platform": "Platform"
+    },
+    "spotlight": {
+      "eyebrow": "House signature",
+      "title": "The Thali. All lines, one plate.",
+      "body": "Can't decide? Ride the whole network. A rotating spread of dal, paneer, curry, rice, sabji and chutney — the full Mumbai Local in fifteen little bowls.",
+      "stat1": { "value": "15", "label": "Katoris per thali" },
+      "stat2": { "value": "12h", "label": "Slow-marinated meats" },
+      "stat3": { "value": "40+", "label": "Dishes on the board" }
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "About Us",
+      "description": "The story behind Mumbai Local — a Bombay street kitchen serving Indian classics from a Berlin platform."
+    },
+    "eyebrow": "The story",
+    "title": "From the 8:12 Local",
+    "intro": "Mumbai Local started as a memory: the smell of pav bhaji drifting across a crowded platform at rush hour. We plated that memory.",
+    "storyTitle": "Born on a crowded platform",
+    "story1": "Mumbai's suburban trains carry millions every day, and every station has its own stall — the vada pav guy, the cutting-chai chaiwala, the poha counter that's gone by nine. That energy is the whole idea behind our kitchen.",
+    "story2": "We cook the classics the way they're made back home: spices ground fresh, meats marinated overnight, no shortcuts. Then we set them down on a proper table, at an easy pace — the flavours of the platform, without the rush.",
+    "quote": "Come hungry, leave on the next train.",
+    "quoteBy": "— The Mumbai Local kitchen",
+    "lineEyebrow": "The line",
+    "lineTitle": "How your meal travels",
+    "stop1": { "title": "Sourced", "body": "Spices and lentils from North India, produce from the market that morning." },
+    "stop2": { "title": "Marinated", "body": "Meats rest up to twelve hours so the masala reaches the bone." },
+    "stop3": { "title": "Fired", "body": "Cooked to order over high heat — the way a street stall does it." },
+    "stop4": { "title": "Served", "body": "Plated hot with basmati, salad, papadam and chutney." },
+    "value1": { "title": "Real spice", "body": "Every masala is ground in-house. Heat levels are marked so you ride the right line." },
+    "value2": { "title": "Generous plates", "body": "Portions built for sharing — thalis, biryanis and breads made to pass around." },
+    "value3": { "title": "Veg-first", "body": "Half the board is vegetarian or vegan, and it's never an afterthought." }
+  },
+  "Contact": {
+    "meta": {
+      "title": "Contact Us",
+      "description": "Reserve a table at Mumbai Local, find our hours, address and phone number."
+    },
+    "eyebrow": "Find the platform",
+    "title": "Book a Table",
+    "intro": "Reserve online in under a minute, or call the kitchen directly. Walk-ins welcome when there's a seat free.",
+    "formTitle": "Reservation request",
+    "formIntro": "Tell us when and how many — we'll confirm by email.",
+    "address": "Address",
+    "directions": "Get directions",
+    "phone": "Phone",
+    "email": "Email",
+    "hoursTitle": "Opening hours",
+    "openMaps": "Open in maps",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailError": "Enter a valid email address.",
+      "date": "Date",
+      "guests": "Guests",
+      "message": "Message",
+      "messagePlaceholder": "Any allergies, a highchair, a window seat…",
+      "submit": "Request table",
+      "required": "This field is required.",
+      "sentTitle": "Request received",
+      "sentBody": "Thanks — we'll confirm your table by email shortly. Platform No.1 is expecting you.",
+      "another": "Send another request"
+    }
+  }
+}

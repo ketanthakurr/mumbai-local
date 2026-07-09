@@ -1,0 +1,129 @@
+{
+  "Metadata": {
+    "title": "Mumbai Local · Cucina indiana",
+    "brand": "Mumbai Local",
+    "description": "Il chiosco di strada incontra il treno di periferia. I classici di Bombay — butter chicken, pav bhaji, thali — serviti caldi, direttamente dal binario."
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "language": "Lingua",
+    "menu": "Apri il menu",
+    "close": "Chiudi il menu"
+  },
+  "Hours": {
+    "mon": "Lunedì",
+    "tueFri": "Mar – Ven",
+    "sat": "Sabato",
+    "sun": "Domenica",
+    "closed": "Chiuso"
+  },
+  "Tags": {
+    "veg": "Veg",
+    "mild": "Delicato",
+    "hot": "Piccante",
+    "veryHot": "Molto piccante",
+    "signature": "Signature"
+  },
+  "Footer": {
+    "blurb": "Una cucina di strada di Bombay su un binario di Berlino. Venite affamati, ripartite col prossimo treno.",
+    "explore": "Esplora",
+    "hours": "Orari",
+    "find": "Dove siamo",
+    "rights": "Tutti i diritti riservati.",
+    "made": "Cucinato fresco · मुंबई लोकल"
+  },
+  "CTA": {
+    "eyebrow": "Il binario n.1 è in partenza",
+    "title": "Prenota prima della folla",
+    "body": "I weekend si riempiono in fretta. Prenota online o chiama la cucina — teniamo il chai al caldo.",
+    "reserve": "Prenota un tavolo",
+    "call": "Chiamaci"
+  },
+  "Home": {
+    "ticker": "Piatti e prezzi di oggi",
+    "hero": {
+      "eyebrow": "Da Bombay a Berlino",
+      "line1": "La Vera Bombay",
+      "line2": "Cibo di Strada",
+      "sub": "Veloce, vivace, pieno di sapore — il cibo che mangi tra un treno e l'altro a Churchgate, servito con tutta calma.",
+      "ctaMenu": "Guarda il menu",
+      "ctaReserve": "Prenota un tavolo",
+      "scroll": "Scorri"
+    },
+    "signature": {
+      "eyebrow": "Piatti signature",
+      "title": "Direttamente dal tawa"
+    },
+    "menu": {
+      "eyebrow": "Il tabellone",
+      "title": "Ogni linea del menu",
+      "intro": "Sei binari, una cucina. Scegli una categoria e segui il sapore — livelli di piccante indicati, prezzi in euro.",
+      "platform": "Binario"
+    },
+    "spotlight": {
+      "eyebrow": "Specialità della casa",
+      "title": "Il Thali. Tutte le linee, un piatto.",
+      "body": "Indecisi? Percorrete tutta la rete. Un assortimento a rotazione di dal, paneer, curry, riso, sabji e chutney — tutto Mumbai Local in quindici piccole ciotole.",
+      "stat1": { "value": "15", "label": "Katori per thali" },
+      "stat2": { "value": "12h", "label": "Carni marinate a lungo" },
+      "stat3": { "value": "40+", "label": "Piatti sul tabellone" }
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "Chi siamo",
+      "description": "La storia di Mumbai Local — una cucina di strada di Bombay che serve i classici indiani da un binario di Berlino."
+    },
+    "eyebrow": "La storia",
+    "title": "Dal Local delle 8:12",
+    "intro": "Mumbai Local è nato da un ricordo: il profumo del pav bhaji che attraversa un binario affollato nell'ora di punta. Quel ricordo lo abbiamo messo nel piatto.",
+    "storyTitle": "Nato su un binario affollato",
+    "story1": "I treni di periferia di Mumbai trasportano milioni di persone ogni giorno, e ogni stazione ha il suo chiosco — il venditore di vada pav, il chaiwala col cutting-chai, il banco del poha finito già alle nove. Quell'energia è l'idea stessa della nostra cucina.",
+    "story2": "Cuciniamo i classici come si fa a casa: spezie macinate fresche, carni marinate tutta la notte, senza scorciatoie. Poi li posiamo su un vero tavolo, con calma — i sapori del binario, senza la ressa.",
+    "quote": "Venite affamati, ripartite col prossimo treno.",
+    "quoteBy": "— La cucina di Mumbai Local",
+    "lineEyebrow": "La linea",
+    "lineTitle": "Il viaggio del vostro pasto",
+    "stop1": { "title": "Selezionato", "body": "Spezie e lenticchie dal Nord India, prodotti dal mercato quella mattina." },
+    "stop2": { "title": "Marinato", "body": "Le carni riposano fino a dodici ore perché il masala arrivi all'osso." },
+    "stop3": { "title": "Cotto", "body": "Preparato al momento a fiamma viva — come fa un chiosco di strada." },
+    "stop4": { "title": "Servito", "body": "Servito caldo con basmati, insalata, papadam e chutney." },
+    "value1": { "title": "Spezie vere", "body": "Ogni masala è macinato in casa. I livelli di piccante sono indicati per scegliere la linea giusta." },
+    "value2": { "title": "Piatti generosi", "body": "Porzioni pensate per condividere — thali, biryani e pane da passare in tavola." },
+    "value3": { "title": "Prima il veg", "body": "Metà del tabellone è vegetariana o vegana, e mai come ripiego." }
+  },
+  "Contact": {
+    "meta": {
+      "title": "Contatti",
+      "description": "Prenota un tavolo da Mumbai Local, consulta orari, indirizzo e numero di telefono."
+    },
+    "eyebrow": "Trova il binario",
+    "title": "Prenota un Tavolo",
+    "intro": "Prenota online in meno di un minuto, o chiama direttamente la cucina. Bene anche senza prenotazione, finché c'è posto.",
+    "formTitle": "Richiesta di prenotazione",
+    "formIntro": "Dicci quando e in quanti — confermiamo via e-mail.",
+    "address": "Indirizzo",
+    "directions": "Indicazioni",
+    "phone": "Telefono",
+    "email": "E-mail",
+    "hoursTitle": "Orari di apertura",
+    "openMaps": "Apri in Maps",
+    "form": {
+      "name": "Nome",
+      "namePlaceholder": "Il tuo nome",
+      "email": "E-mail",
+      "emailError": "Inserisci un indirizzo e-mail valido.",
+      "date": "Data",
+      "guests": "Ospiti",
+      "message": "Messaggio",
+      "messagePlaceholder": "Allergie, seggiolone, tavolo vicino alla finestra…",
+      "submit": "Richiedi un tavolo",
+      "required": "Questo campo è obbligatorio.",
+      "sentTitle": "Richiesta ricevuta",
+      "sentBody": "Grazie — confermeremo il tavolo via e-mail a breve. Il binario n.1 vi aspetta.",
+      "another": "Invia un'altra richiesta"
+    }
+  }
+}
