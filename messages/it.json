@@ -20,11 +20,18 @@
     "closed": "Chiuso"
   },
   "Tags": {
-    "veg": "Veg",
+    "veg": "Vegetariano",
+    "vegan": "Vegano",
     "mild": "Delicato",
     "hot": "Piccante",
     "veryHot": "Molto piccante",
     "signature": "Signature"
+  },
+  "Allergens": {
+    "legend": "Allergeni",
+    "nuts": { "label": "Frutta a guscio", "contains": "Contiene frutta a guscio" },
+    "dairy": { "label": "Latticini", "contains": "Contiene latticini" },
+    "gluten": { "label": "Glutine", "contains": "Contiene glutine" }
   },
   "Footer": {
     "blurb": "Una cucina di strada di Bombay su un binario di Berlino. Venite affamati, ripartite col prossimo treno.",
@@ -49,18 +56,21 @@
       "line2": "Cibo di Strada",
       "sub": "Veloce, vivace, pieno di sapore — il cibo che mangi tra un treno e l'altro a Churchgate, servito con tutta calma.",
       "ctaMenu": "Guarda il menu",
-      "ctaReserve": "Prenota un tavolo",
+      "ctaReserve": "Prenota il tavolo",
       "scroll": "Scorri"
     },
     "signature": {
       "eyebrow": "Piatti signature",
-      "title": "Direttamente dal tawa"
+      "title": "Direttamente dal tawa",
+      "scrollHint": "Scorri",
+      "swipeHint": "Scorri per esplorare"
     },
     "menu": {
       "eyebrow": "Il tabellone",
       "title": "Ogni linea del menu",
       "intro": "Sei binari, una cucina. Scegli una categoria e segui il sapore — livelli di piccante indicati, prezzi in euro.",
-      "platform": "Binario"
+      "platform": "Binario",
+      "jump": "Vai a"
     },
     "spotlight": {
       "eyebrow": "Specialità della casa",
@@ -109,6 +119,7 @@
     "phone": "Telefono",
     "email": "E-mail",
     "hoursTitle": "Orari di apertura",
+    "mapTitle": "Trova il binario",
     "openMaps": "Apri in Maps",
     "form": {
       "name": "Nome",

@@ -20,11 +20,18 @@
     "closed": "Fermé"
   },
   "Tags": {
-    "veg": "Végé",
+    "veg": "Végétarien",
+    "vegan": "Végan",
     "mild": "Doux",
     "hot": "Épicé",
     "veryHot": "Très épicé",
     "signature": "Signature"
+  },
+  "Allergens": {
+    "legend": "Allergènes",
+    "nuts": { "label": "Fruits à coque", "contains": "Contient des fruits à coque" },
+    "dairy": { "label": "Lait", "contains": "Contient des produits laitiers" },
+    "gluten": { "label": "Gluten", "contains": "Contient du gluten" }
   },
   "Footer": {
     "blurb": "Une cuisine de rue de Bombay sur un quai berlinois. Venez affamés, repartez au prochain train.",
@@ -49,18 +56,21 @@
       "line2": "Cuisine de Rue",
       "sub": "Rapide, animé, plein de saveurs — la cuisine qu'on avale entre deux trains à Churchgate, dressée pour prendre son temps.",
       "ctaMenu": "Voir la carte",
-      "ctaReserve": "Réserver une table",
+      "ctaReserve": "Réserver ma table",
       "scroll": "Défiler"
     },
     "signature": {
       "eyebrow": "Plats signature",
-      "title": "Tout droit du tawa"
+      "title": "Tout droit du tawa",
+      "scrollHint": "Défiler",
+      "swipeHint": "Balayez pour explorer"
     },
     "menu": {
       "eyebrow": "Le tableau",
       "title": "Toutes les lignes du menu",
       "intro": "Six quais, une cuisine. Choisissez une catégorie et suivez la saveur — niveaux d'épices indiqués, prix en euros.",
-      "platform": "Quai"
+      "platform": "Quai",
+      "jump": "Aller à"
     },
     "spotlight": {
       "eyebrow": "Spécialité maison",
@@ -109,6 +119,7 @@
     "phone": "Téléphone",
     "email": "E-mail",
     "hoursTitle": "Horaires d'ouverture",
+    "mapTitle": "Trouver le quai",
     "openMaps": "Ouvrir dans Maps",
     "form": {
       "name": "Nom",

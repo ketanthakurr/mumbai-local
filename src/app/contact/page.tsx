@@ -23,6 +23,9 @@ export default async function ContactPage() {
     { Icon: MapPin, label: t("address"), value: `${site.address.street}, ${site.address.city}`, href: site.mapsHref },
   ];
 
+  const mapQuery = encodeURIComponent(`${site.address.street}, ${site.address.city}`);
+  const mapEmbed = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+
   return (
     <>
       <PageHero eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} image={img.interior} accent="cyan" />
@@ -101,6 +104,33 @@ export default async function ContactPage() {
                   ))}
                 </ul>
               </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Live map embed */}
+      <section className="pb-20 pt-2">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <Reveal>
+            <div className="glass overflow-hidden rounded-3xl">
+              <div className="flex items-center justify-between gap-3 border-b border-white/8 px-5 py-4 sm:px-6">
+                <h2 className="font-display text-2xl text-bone">{t("mapTitle")}</h2>
+                <a
+                  href={site.mapsHref}
+                  className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-cyan transition-colors hover:text-bone"
+                >
+                  {t("openMaps")} <ExternalLink className="size-3.5" />
+                </a>
+              </div>
+              <iframe
+                title={t("mapTitle")}
+                src={mapEmbed}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+                className="h-[380px] w-full border-0"
+              />
             </div>
           </Reveal>
         </div>

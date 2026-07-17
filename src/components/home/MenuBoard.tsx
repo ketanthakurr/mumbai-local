@@ -1,16 +1,25 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { menu, tagLabelKey, type DishTag } from "@/lib/menu";
+import { menu, tagLabelKey, allergenLabelKey, type Allergen } from "@/lib/menu";
 import { categoryImage } from "@/lib/images";
 import { Reveal } from "@/components/motion/Reveal";
 import { TagChip } from "@/components/site/TagChip";
+import { AllergenIcons } from "@/components/site/AllergenIcons";
 import { PaisleyDivider } from "@/components/site/Motifs";
+import { Nut, Milk, Wheat } from "lucide-react";
 
 const neon = ["text-magenta", "text-cyan", "text-marigold"];
+const allergenOrder: Allergen[] = ["nuts", "dairy", "gluten"];
+const legendIcon = { nuts: Nut, dairy: Milk, gluten: Wheat };
 
 export async function MenuBoard() {
   const t = await getTranslations("Home.menu");
   const tTag = await getTranslations("Tags");
+  const tAll = await getTranslations("Allergens");
+
+  const allergenLabels = Object.fromEntries(
+    allergenOrder.map((a) => [a, tAll(`${allergenLabelKey[a]}.contains`)]),
+  ) as Record<Allergen, string>;
 
   return (
     <section id="menu" className="relative scroll-mt-24 pb-24 pt-12 sm:pb-28">
@@ -27,15 +36,34 @@ export async function MenuBoard() {
           </div>
         </Reveal>
 
+        {/* Jump-to-category nav — sticky under the fixed header on long scrolls */}
+        <nav
+          aria-label={t("jump")}
+          className="glass sticky top-[72px] z-30 mt-8 flex gap-2 overflow-x-auto rounded-2xl px-3 py-3 [scrollbar-width:none]"
+        >
+          <span className="hidden shrink-0 items-center pl-1 pr-2 font-mono text-[10px] uppercase tracking-[0.2em] text-bone/40 sm:inline-flex">
+            {t("jump")}
+          </span>
+          {menu.map((cat) => (
+            <a
+              key={cat.id}
+              href={`#${cat.id}`}
+              className="shrink-0 whitespace-nowrap rounded-full border border-white/12 px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-bone/70 transition-colors hover:border-cyan hover:text-cyan"
+            >
+              {cat.title}
+            </a>
+          ))}
+        </nav>
+
         {/* Masonry: cards pack tightly regardless of dish count */}
-        <div className="mt-12 columns-1 gap-6 lg:columns-2">
+        <div className="mt-8 columns-1 gap-6 lg:columns-2">
           {menu.map((cat, i) => (
             <Reveal
               key={cat.id}
               direction="none"
               className="mb-6 block break-inside-avoid"
             >
-              <article className="group glass overflow-hidden rounded-3xl">
+              <article id={cat.id} className="group glass scroll-mt-36 overflow-hidden rounded-3xl">
                 <header className="relative h-44 overflow-hidden">
                   <Image
                     src={categoryImage[cat.id]}
@@ -65,11 +93,12 @@ export async function MenuBoard() {
                             <span className="font-display text-lg tracking-wide text-bone">
                               {dish.name}
                             </span>
-                            {dish.tags
-                              ?.filter((tag: DishTag) => tag !== "veg")
-                              .map((tag: DishTag) => (
-                                <TagChip key={tag} tag={tag} label={tTag(tagLabelKey[tag])} />
-                              ))}
+                            {dish.tags?.map((tag) => (
+                              <TagChip key={tag} tag={tag} label={tTag(tagLabelKey[tag])} />
+                            ))}
+                            {dish.allergens && dish.allergens.length > 0 && (
+                              <AllergenIcons allergens={dish.allergens} labels={allergenLabels} />
+                            )}
                           </div>
                           <p className="text-[13px] leading-snug text-bone/50">{dish.note}</p>
                         </div>
@@ -88,6 +117,24 @@ export async function MenuBoard() {
             </Reveal>
           ))}
         </div>
+
+        {/* Allergen legend */}
+        <Reveal>
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 rounded-2xl border border-white/8 px-5 py-4">
+            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-bone/40">
+              {tAll("legend")}
+            </span>
+            {allergenOrder.map((a) => {
+              const Icon = legendIcon[a];
+              return (
+                <span key={a} className="inline-flex items-center gap-2 text-sm text-bone/60">
+                  <Icon className="size-4 text-bone/45" aria-hidden />
+                  {tAll(`${allergenLabelKey[a]}.label`)}
+                </span>
+              );
+            })}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

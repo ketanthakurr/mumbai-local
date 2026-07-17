@@ -20,11 +20,18 @@
     "closed": "Closed"
   },
   "Tags": {
-    "veg": "Veg",
+    "veg": "Vegetarian",
+    "vegan": "Vegan",
     "mild": "Mild",
     "hot": "Spicy",
     "veryHot": "Very hot",
     "signature": "Signature"
+  },
+  "Allergens": {
+    "legend": "Allergens",
+    "nuts": { "label": "Nuts", "contains": "Contains nuts" },
+    "dairy": { "label": "Dairy", "contains": "Contains dairy" },
+    "gluten": { "label": "Gluten", "contains": "Contains gluten" }
   },
   "Footer": {
     "blurb": "A Bombay street kitchen on a Berlin platform. Come hungry, leave on the next train.",
@@ -49,18 +56,21 @@
       "line2": "Street Food",
       "sub": "Fast, loud, full of flavour — the food you'd eat between trains at Churchgate, plated for the long stay.",
       "ctaMenu": "See the menu",
-      "ctaReserve": "Reserve a table",
+      "ctaReserve": "Book a table",
       "scroll": "Scroll"
     },
     "signature": {
       "eyebrow": "Signature dishes",
-      "title": "Straight off the tawa"
+      "title": "Straight off the tawa",
+      "scrollHint": "Scroll",
+      "swipeHint": "Swipe to explore"
     },
     "menu": {
       "eyebrow": "The board",
       "title": "Every line on the menu",
       "intro": "Six platforms, one kitchen. Tap a category and follow the flavour — spice levels marked, prices in euro.",
-      "platform": "Platform"
+      "platform": "Platform",
+      "jump": "Jump to"
     },
     "spotlight": {
       "eyebrow": "House signature",
@@ -109,6 +119,7 @@
     "phone": "Phone",
     "email": "Email",
     "hoursTitle": "Opening hours",
+    "mapTitle": "Find the platform",
     "openMaps": "Open in maps",
     "form": {
       "name": "Name",

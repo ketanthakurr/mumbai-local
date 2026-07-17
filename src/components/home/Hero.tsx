@@ -52,9 +52,10 @@ export function Hero() {
 
   return (
     <section ref={scope} className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-20">
-      {/* Background image + wash */}
+      {/* Background image + wash — a full spread of curries + rice so the
+          first impression reads as the cuisine, not the room. */}
       <div className="hero-bg absolute inset-0 -z-20 scale-110">
-        <Image src={img.pavBhaji} alt="" fill priority sizes="100vw" className="object-cover" />
+        <Image src={img.curryRice} alt="" fill priority sizes="100vw" className="object-cover" />
       </div>
       <div
         className="absolute inset-0 -z-10"
