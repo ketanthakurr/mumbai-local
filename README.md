@@ -20,6 +20,13 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Imagery
+
+Homepage collage photos live in `public/dishes/` and are CC BY-SA 4.0 placeholders
+from Wikimedia Commons — credits in `public/dishes/ATTRIBUTION.md`, which must stay
+published while those files are in use. Swap them for the restaurant's own
+photography (same filenames) and delete the attribution file.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
