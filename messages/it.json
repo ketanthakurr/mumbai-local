@@ -10,13 +10,12 @@
     "contact": "Contatti",
     "language": "Lingua",
     "menu": "Apri il menu",
-    "close": "Chiudi il menu"
+    "close": "Chiudi il menu",
+    "privacy": "Informativa sulla privacy",
+    "imprint": "Note legali"
   },
   "Hours": {
-    "mon": "Lunedì",
-    "tueFri": "Mar – Ven",
-    "sat": "Sabato",
-    "sun": "Domenica",
+    "daily": "Tutti i giorni",
     "closed": "Chiuso"
   },
   "Tags": {
@@ -29,9 +28,18 @@
   },
   "Allergens": {
     "legend": "Allergeni",
-    "nuts": { "label": "Frutta a guscio", "contains": "Contiene frutta a guscio" },
-    "dairy": { "label": "Latticini", "contains": "Contiene latticini" },
-    "gluten": { "label": "Glutine", "contains": "Contiene glutine" }
+    "nuts": {
+      "label": "Frutta a guscio",
+      "contains": "Contiene frutta a guscio"
+    },
+    "dairy": {
+      "label": "Latticini",
+      "contains": "Contiene latticini"
+    },
+    "gluten": {
+      "label": "Glutine",
+      "contains": "Contiene glutine"
+    }
   },
   "Footer": {
     "blurb": "Una cucina di strada di Bombay su un binario di Berlino. Venite affamati, ripartite col prossimo treno.",
@@ -39,7 +47,8 @@
     "hours": "Orari",
     "find": "Dove siamo",
     "rights": "Tutti i diritti riservati.",
-    "made": "Cucinato fresco · मुंबई लोकल"
+    "made": "Cucinato fresco · मुंबई लोकल",
+    "legal": "Legale"
   },
   "CTA": {
     "eyebrow": "Il binario n.1 è in partenza",
@@ -76,9 +85,18 @@
       "eyebrow": "Specialità della casa",
       "title": "Il Thali. Tutte le linee, un piatto.",
       "body": "Indecisi? Percorrete tutta la rete. Un assortimento a rotazione di dal, paneer, curry, riso, sabji e chutney — tutto Mumbai Local in quindici piccole ciotole.",
-      "stat1": { "value": "15", "label": "Katori per thali" },
-      "stat2": { "value": "12h", "label": "Carni marinate a lungo" },
-      "stat3": { "value": "40+", "label": "Piatti sul tabellone" }
+      "stat1": {
+        "value": "15",
+        "label": "Katori per thali"
+      },
+      "stat2": {
+        "value": "12h",
+        "label": "Carni marinate a lungo"
+      },
+      "stat3": {
+        "value": "40+",
+        "label": "Piatti sul tabellone"
+      }
     }
   },
   "About": {
@@ -96,13 +114,34 @@
     "quoteBy": "— La cucina di Mumbai Local",
     "lineEyebrow": "La linea",
     "lineTitle": "Il viaggio del vostro pasto",
-    "stop1": { "title": "Selezionato", "body": "Spezie e lenticchie dal Nord India, prodotti dal mercato quella mattina." },
-    "stop2": { "title": "Marinato", "body": "Le carni riposano fino a dodici ore perché il masala arrivi all'osso." },
-    "stop3": { "title": "Cotto", "body": "Preparato al momento a fiamma viva — come fa un chiosco di strada." },
-    "stop4": { "title": "Servito", "body": "Servito caldo con basmati, insalata, papadam e chutney." },
-    "value1": { "title": "Spezie vere", "body": "Ogni masala è macinato in casa. I livelli di piccante sono indicati per scegliere la linea giusta." },
-    "value2": { "title": "Piatti generosi", "body": "Porzioni pensate per condividere — thali, biryani e pane da passare in tavola." },
-    "value3": { "title": "Prima il veg", "body": "Metà del tabellone è vegetariana o vegana, e mai come ripiego." }
+    "stop1": {
+      "title": "Selezionato",
+      "body": "Spezie e lenticchie dal Nord India, prodotti dal mercato quella mattina."
+    },
+    "stop2": {
+      "title": "Marinato",
+      "body": "Le carni riposano fino a dodici ore perché il masala arrivi all'osso."
+    },
+    "stop3": {
+      "title": "Cotto",
+      "body": "Preparato al momento a fiamma viva — come fa un chiosco di strada."
+    },
+    "stop4": {
+      "title": "Servito",
+      "body": "Servito caldo con basmati, insalata, papadam e chutney."
+    },
+    "value1": {
+      "title": "Spezie vere",
+      "body": "Ogni masala è macinato in casa. I livelli di piccante sono indicati per scegliere la linea giusta."
+    },
+    "value2": {
+      "title": "Piatti generosi",
+      "body": "Porzioni pensate per condividere — thali, biryani e pane da passare in tavola."
+    },
+    "value3": {
+      "title": "Prima il veg",
+      "body": "Metà del tabellone è vegetariana o vegana, e mai come ripiego."
+    }
   },
   "Contact": {
     "meta": {
@@ -136,5 +175,23 @@
       "sentBody": "Grazie — confermeremo il tavolo via e-mail a breve. Il binario n.1 vi aspetta.",
       "another": "Invia un'altra richiesta"
     }
+  },
+  "Imprint": {
+    "meta": {
+      "title": "Note legali",
+      "description": "Note legali di Mumbai Local, Berlino — gestore, indirizzo e dati regolamentari."
+    },
+    "eyebrow": "Legale",
+    "title": "Note legali",
+    "intro": "Informazioni richieste ai sensi del § 5 TMG."
+  },
+  "Privacy": {
+    "meta": {
+      "title": "Informativa sulla privacy",
+      "description": "Come Mumbai Local raccoglie, utilizza e conserva i tuoi dati personali."
+    },
+    "eyebrow": "Legale",
+    "title": "Informativa sulla privacy",
+    "intro": "Quali dati personali raccogliamo e perché."
   }
 }

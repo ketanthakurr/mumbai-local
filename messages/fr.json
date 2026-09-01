@@ -10,13 +10,12 @@
     "contact": "Contact",
     "language": "Langue",
     "menu": "Ouvrir le menu",
-    "close": "Fermer le menu"
+    "close": "Fermer le menu",
+    "privacy": "Politique de confidentialité",
+    "imprint": "Mentions légales"
   },
   "Hours": {
-    "mon": "Lundi",
-    "tueFri": "Mar – Ven",
-    "sat": "Samedi",
-    "sun": "Dimanche",
+    "daily": "Tous les jours",
     "closed": "Fermé"
   },
   "Tags": {
@@ -29,9 +28,18 @@
   },
   "Allergens": {
     "legend": "Allergènes",
-    "nuts": { "label": "Fruits à coque", "contains": "Contient des fruits à coque" },
-    "dairy": { "label": "Lait", "contains": "Contient des produits laitiers" },
-    "gluten": { "label": "Gluten", "contains": "Contient du gluten" }
+    "nuts": {
+      "label": "Fruits à coque",
+      "contains": "Contient des fruits à coque"
+    },
+    "dairy": {
+      "label": "Lait",
+      "contains": "Contient des produits laitiers"
+    },
+    "gluten": {
+      "label": "Gluten",
+      "contains": "Contient du gluten"
+    }
   },
   "Footer": {
     "blurb": "Une cuisine de rue de Bombay sur un quai berlinois. Venez affamés, repartez au prochain train.",
@@ -39,7 +47,8 @@
     "hours": "Horaires",
     "find": "Nous trouver",
     "rights": "Tous droits réservés.",
-    "made": "Cuisiné frais · मुंबई लोकल"
+    "made": "Cuisiné frais · मुंबई लोकल",
+    "legal": "Légal"
   },
   "CTA": {
     "eyebrow": "Le quai n°1 embarque",
@@ -76,9 +85,18 @@
       "eyebrow": "Spécialité maison",
       "title": "Le Thali. Toutes les lignes, une assiette.",
       "body": "Indécis ? Parcourez tout le réseau. Un assortiment tournant de dal, paneer, curry, riz, sabji et chutney — tout Mumbai Local en quinze petits bols.",
-      "stat1": { "value": "15", "label": "Katoris par thali" },
-      "stat2": { "value": "12h", "label": "Viandes longuement marinées" },
-      "stat3": { "value": "40+", "label": "Plats au tableau" }
+      "stat1": {
+        "value": "15",
+        "label": "Katoris par thali"
+      },
+      "stat2": {
+        "value": "12h",
+        "label": "Viandes longuement marinées"
+      },
+      "stat3": {
+        "value": "40+",
+        "label": "Plats au tableau"
+      }
     }
   },
   "About": {
@@ -96,13 +114,34 @@
     "quoteBy": "— La cuisine de Mumbai Local",
     "lineEyebrow": "La ligne",
     "lineTitle": "Le trajet de votre repas",
-    "stop1": { "title": "Sourcé", "body": "Épices et lentilles du nord de l'Inde, produits du marché le matin même." },
-    "stop2": { "title": "Mariné", "body": "Les viandes reposent jusqu'à douze heures pour que le masala atteigne l'os." },
-    "stop3": { "title": "Saisi", "body": "Cuisiné à la commande à feu vif — comme le fait une échoppe de rue." },
-    "stop4": { "title": "Servi", "body": "Dressé bien chaud avec basmati, salade, papadam et chutney." },
-    "value1": { "title": "Vraies épices", "body": "Chaque masala est moulu maison. Les niveaux de piment sont indiqués pour choisir la bonne ligne." },
-    "value2": { "title": "Assiettes généreuses", "body": "Des portions à partager — thalis, biryanis et pains faits pour circuler." },
-    "value3": { "title": "Le végé d'abord", "body": "La moitié du tableau est végétarienne ou végane, et jamais par défaut." }
+    "stop1": {
+      "title": "Sourcé",
+      "body": "Épices et lentilles du nord de l'Inde, produits du marché le matin même."
+    },
+    "stop2": {
+      "title": "Mariné",
+      "body": "Les viandes reposent jusqu'à douze heures pour que le masala atteigne l'os."
+    },
+    "stop3": {
+      "title": "Saisi",
+      "body": "Cuisiné à la commande à feu vif — comme le fait une échoppe de rue."
+    },
+    "stop4": {
+      "title": "Servi",
+      "body": "Dressé bien chaud avec basmati, salade, papadam et chutney."
+    },
+    "value1": {
+      "title": "Vraies épices",
+      "body": "Chaque masala est moulu maison. Les niveaux de piment sont indiqués pour choisir la bonne ligne."
+    },
+    "value2": {
+      "title": "Assiettes généreuses",
+      "body": "Des portions à partager — thalis, biryanis et pains faits pour circuler."
+    },
+    "value3": {
+      "title": "Le végé d'abord",
+      "body": "La moitié du tableau est végétarienne ou végane, et jamais par défaut."
+    }
   },
   "Contact": {
     "meta": {
@@ -136,5 +175,23 @@
       "sentBody": "Merci — nous confirmons votre table par e-mail sous peu. Le quai n°1 vous attend.",
       "another": "Envoyer une autre demande"
     }
+  },
+  "Imprint": {
+    "meta": {
+      "title": "Mentions légales",
+      "description": "Mentions légales de Mumbai Local, Berlin — exploitant, adresse et informations réglementaires."
+    },
+    "eyebrow": "Légal",
+    "title": "Mentions légales",
+    "intro": "Informations requises par le § 5 TMG."
+  },
+  "Privacy": {
+    "meta": {
+      "title": "Politique de confidentialité",
+      "description": "Comment Mumbai Local collecte, utilise et conserve vos données personnelles."
+    },
+    "eyebrow": "Légal",
+    "title": "Politique de confidentialité",
+    "intro": "Quelles données personnelles nous collectons et pourquoi."
   }
 }

@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: `%s · ${t("brand")}`,
     },
     description: t("description"),
-    metadataBase: new URL("https://mumbailocal.example"),
+    metadataBase: new URL("https://www.mumbai-local.de"),
     openGraph: {
       title: t("title"),
       description: t("description"),

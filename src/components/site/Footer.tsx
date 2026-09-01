@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { site, nav, hours } from "@/lib/site";
+import { site, nav, hours, legalNav } from "@/lib/site";
 import { FooterScene } from "./FooterScene";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -87,6 +87,22 @@ export async function Footer() {
                 <span className="font-mono text-xs tabular text-bone/55">
                   {h.closed ? t("Hours.closed") : h.open}
                 </span>
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="mt-8 font-mono text-[11px] uppercase tracking-[0.3em] text-marigold">
+            {t("Footer.legal")}
+          </h3>
+          <ul className="mt-5 space-y-3">
+            {legalNav.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="link-sweep text-sm text-bone/70 transition-colors hover:text-bone"
+                >
+                  {t(`Nav.${item.key}`)}
+                </Link>
               </li>
             ))}
           </ul>

@@ -10,13 +10,12 @@
     "contact": "Contact Us",
     "language": "Language",
     "menu": "Open menu",
-    "close": "Close menu"
+    "close": "Close menu",
+    "privacy": "Privacy policy",
+    "imprint": "Imprint"
   },
   "Hours": {
-    "mon": "Monday",
-    "tueFri": "Tue – Fri",
-    "sat": "Saturday",
-    "sun": "Sunday",
+    "daily": "Daily",
     "closed": "Closed"
   },
   "Tags": {
@@ -29,9 +28,18 @@
   },
   "Allergens": {
     "legend": "Allergens",
-    "nuts": { "label": "Nuts", "contains": "Contains nuts" },
-    "dairy": { "label": "Dairy", "contains": "Contains dairy" },
-    "gluten": { "label": "Gluten", "contains": "Contains gluten" }
+    "nuts": {
+      "label": "Nuts",
+      "contains": "Contains nuts"
+    },
+    "dairy": {
+      "label": "Dairy",
+      "contains": "Contains dairy"
+    },
+    "gluten": {
+      "label": "Gluten",
+      "contains": "Contains gluten"
+    }
   },
   "Footer": {
     "blurb": "A Bombay street kitchen on a Berlin platform. Come hungry, leave on the next train.",
@@ -39,7 +47,8 @@
     "hours": "Hours",
     "find": "Find us",
     "rights": "All rights reserved.",
-    "made": "Cooked fresh · मुंबई लोकल"
+    "made": "Cooked fresh · मुंबई लोकल",
+    "legal": "Legal"
   },
   "CTA": {
     "eyebrow": "Platform No.1 is boarding",
@@ -76,9 +85,18 @@
       "eyebrow": "House signature",
       "title": "The Thali. All lines, one plate.",
       "body": "Can't decide? Ride the whole network. A rotating spread of dal, paneer, curry, rice, sabji and chutney — the full Mumbai Local in fifteen little bowls.",
-      "stat1": { "value": "15", "label": "Katoris per thali" },
-      "stat2": { "value": "12h", "label": "Slow-marinated meats" },
-      "stat3": { "value": "40+", "label": "Dishes on the board" }
+      "stat1": {
+        "value": "15",
+        "label": "Katoris per thali"
+      },
+      "stat2": {
+        "value": "12h",
+        "label": "Slow-marinated meats"
+      },
+      "stat3": {
+        "value": "40+",
+        "label": "Dishes on the board"
+      }
     }
   },
   "About": {
@@ -96,13 +114,34 @@
     "quoteBy": "— The Mumbai Local kitchen",
     "lineEyebrow": "The line",
     "lineTitle": "How your meal travels",
-    "stop1": { "title": "Sourced", "body": "Spices and lentils from North India, produce from the market that morning." },
-    "stop2": { "title": "Marinated", "body": "Meats rest up to twelve hours so the masala reaches the bone." },
-    "stop3": { "title": "Fired", "body": "Cooked to order over high heat — the way a street stall does it." },
-    "stop4": { "title": "Served", "body": "Plated hot with basmati, salad, papadam and chutney." },
-    "value1": { "title": "Real spice", "body": "Every masala is ground in-house. Heat levels are marked so you ride the right line." },
-    "value2": { "title": "Generous plates", "body": "Portions built for sharing — thalis, biryanis and breads made to pass around." },
-    "value3": { "title": "Veg-first", "body": "Half the board is vegetarian or vegan, and it's never an afterthought." }
+    "stop1": {
+      "title": "Sourced",
+      "body": "Spices and lentils from North India, produce from the market that morning."
+    },
+    "stop2": {
+      "title": "Marinated",
+      "body": "Meats rest up to twelve hours so the masala reaches the bone."
+    },
+    "stop3": {
+      "title": "Fired",
+      "body": "Cooked to order over high heat — the way a street stall does it."
+    },
+    "stop4": {
+      "title": "Served",
+      "body": "Plated hot with basmati, salad, papadam and chutney."
+    },
+    "value1": {
+      "title": "Real spice",
+      "body": "Every masala is ground in-house. Heat levels are marked so you ride the right line."
+    },
+    "value2": {
+      "title": "Generous plates",
+      "body": "Portions built for sharing — thalis, biryanis and breads made to pass around."
+    },
+    "value3": {
+      "title": "Veg-first",
+      "body": "Half the board is vegetarian or vegan, and it's never an afterthought."
+    }
   },
   "Contact": {
     "meta": {
@@ -136,5 +175,23 @@
       "sentBody": "Thanks — we'll confirm your table by email shortly. Platform No.1 is expecting you.",
       "another": "Send another request"
     }
+  },
+  "Imprint": {
+    "meta": {
+      "title": "Imprint",
+      "description": "Legal disclosure for Mumbai Local, Berlin — operator, address and regulatory details."
+    },
+    "eyebrow": "Legal",
+    "title": "Imprint",
+    "intro": "Information required under § 5 TMG."
+  },
+  "Privacy": {
+    "meta": {
+      "title": "Privacy policy",
+      "description": "How Mumbai Local collects, uses and retains your personal data."
+    },
+    "eyebrow": "Legal",
+    "title": "Privacy policy",
+    "intro": "What personal data we collect and why we collect it."
   }
 }
