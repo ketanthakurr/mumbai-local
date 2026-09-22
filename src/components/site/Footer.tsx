@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { site, nav, hours, legalNav } from "@/lib/site";
+import { site, nav, hours, legalNav, outlets } from "@/lib/site";
 import { FooterScene } from "./FooterScene";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -113,14 +113,22 @@ export async function Footer() {
             {t("Footer.find")}
           </h3>
           <ul className="mt-5 space-y-4 text-sm text-bone/70">
-            <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-magenta" />
-              <span>
-                {site.address.street}
-                <br />
-                {site.address.city}
-              </span>
-            </li>
+            {outlets.map((o) => (
+              <li key={o.key} className="flex items-start gap-3">
+                <MapPin className="mt-0.5 size-4 shrink-0 text-magenta" />
+                <span>
+                  {o.venue && (
+                    <>
+                      {o.venue}
+                      <br />
+                    </>
+                  )}
+                  {o.street}
+                  <br />
+                  {o.city}
+                </span>
+              </li>
+            ))}
             <li>
               <a
                 href={site.phoneHref}

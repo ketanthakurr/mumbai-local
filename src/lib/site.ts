@@ -9,12 +9,6 @@ export const site = {
   email: "info@mumbai-local.de",
   website: "www.mumbai-local.de",
   websiteHref: "https://www.mumbai-local.de",
-  address: {
-    street: "Rathaus Str 13",
-    city: "10178 Berlin",
-    country: "Germany",
-  },
-  mapsHref: "https://maps.google.com/?q=Rathausstr+13+10178+Berlin",
   socials: {
     instagram: "https://instagram.com/mumbailocal",
     facebook: "https://facebook.com/mumbailocal",
@@ -33,10 +27,38 @@ export const legal = {
     name: "Ordnungsamt Berlin Mitte",
     address: "Karl-Marx-Allee 31",
   },
-  /** Venue address as printed on the imprint. */
-  venueStreet: "Rathausstr 05",
-  venueCity: "10178 Berlin",
+  /** Venue addresses as printed on the imprint. */
+  venues: [
+    { name: "Mumbai Local", street: "Rathausstr 05", city: "10178 Berlin" },
+    { name: "Mumbai Local @ The Playce Potsdamer Platz", street: "Alte Potsdamer Str 07", city: "10117 Berlin" },
+  ],
 } as const;
+
+/** Outlets — each is its own restaurant; phone, email and hours are shared. */
+export type Outlet = {
+  key: string;
+  /** Host venue, when the outlet sits inside one. */
+  venue?: string;
+  street: string;
+  city: string;
+  mapsHref: string;
+};
+
+export const outlets: Outlet[] = [
+  {
+    key: "rathaus",
+    street: "Rathaus Str 13",
+    city: "10178 Berlin",
+    mapsHref: "https://maps.google.com/?q=Rathausstr+13+10178+Berlin",
+  },
+  {
+    key: "playce",
+    venue: "The Playce Potsdamer Platz",
+    street: "Alte Potsdamer Str 07",
+    city: "10117 Berlin",
+    mapsHref: "https://maps.google.com/?q=The+Playce+Alte+Potsdamer+Str+7+10117+Berlin",
+  },
+];
 
 /** Opening hours — key is used for i18n day labels. */
 export const hours: {

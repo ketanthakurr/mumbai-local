@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { ArrowRight } from "lucide-react";
 import { dish, type HeroDish } from "@/lib/dishes";
-import { site } from "@/lib/site";
+import { site, outlets } from "@/lib/site";
 import { Rickshaw } from "@/components/site/Motifs";
 
 if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -237,19 +237,28 @@ export function Hero() {
           <motion.div
             custom={6}
             variants={tile}
-            className="col-span-2 flex flex-col justify-between bg-marigold p-4 text-ink md:col-span-1 md:row-span-2"
+            className="col-span-2 flex flex-col justify-between gap-4 bg-marigold p-4 text-ink md:col-span-1 md:row-span-2"
           >
             <div>
               <p className="font-deva text-lg leading-tight">{site.deva}</p>
               <p className="font-display mt-1 text-xl leading-[0.9]">{site.tagline}</p>
             </div>
-            <address className="not-italic">
-              <p className="font-mono text-[10px] uppercase leading-relaxed tracking-[0.08em] sm:text-[11px]">
-                {site.address.street}
-              </p>
-              <p className="font-mono text-[10px] uppercase leading-relaxed tracking-[0.08em] sm:text-[11px] text-ink/70">
-                {site.address.city}
-              </p>
+            <address className="space-y-2 not-italic">
+              {outlets.map((o) => (
+                <div key={o.key}>
+                  {o.venue && (
+                    <p className="font-mono text-[10px] uppercase leading-relaxed tracking-[0.08em] sm:text-[11px]">
+                      {o.venue}
+                    </p>
+                  )}
+                  <p className="font-mono text-[10px] uppercase leading-relaxed tracking-[0.08em] sm:text-[11px]">
+                    {o.street}
+                  </p>
+                  <p className="font-mono text-[10px] uppercase leading-relaxed tracking-[0.08em] sm:text-[11px] text-ink/70">
+                    {o.city}
+                  </p>
+                </div>
+              ))}
             </address>
           </motion.div>
         </motion.div>

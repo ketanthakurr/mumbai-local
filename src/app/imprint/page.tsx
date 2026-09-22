@@ -24,13 +24,16 @@ export default async function ImprintPage() {
           <Reveal>
             <Prose>
               <LegalHeading>Who we are</LegalHeading>
+              {legal.venues.map((v) => (
+                <p key={v.street}>
+                  {v.name}
+                  <br />
+                  {v.street}
+                  <br />
+                  {v.city}
+                </p>
+              ))}
               <p>
-                {site.name}
-                <br />
-                {legal.venueStreet}
-                <br />
-                {legal.venueCity}
-                <br />
                 <a href={site.websiteHref}>{site.website}</a>
               </p>
 

@@ -1,13 +1,18 @@
-import { site, hours } from "@/lib/site";
+import { Fragment } from "react";
+import { site, hours, outlets } from "@/lib/site";
 
-/** Contact strip repeated at the foot of the legal pages. */
+/** Contact strip repeated at the foot of the contact and legal pages. */
 export function LegalContact() {
   return (
     <div className="glass rounded-2xl p-5 text-sm leading-relaxed text-bone/70 sm:p-6">
       <p>
-        {site.name}, {site.address.street}
-        <br />
-        {site.address.city},{" "}
+        {outlets.map((o) => (
+          <Fragment key={o.key}>
+            {site.name}
+            {o.venue && ` @ ${o.venue}`}, {o.street}, {o.city}
+            <br />
+          </Fragment>
+        ))}
         <a href={`mailto:${site.email}`} className="text-cyan hover:text-bone">
           {site.email}
         </a>

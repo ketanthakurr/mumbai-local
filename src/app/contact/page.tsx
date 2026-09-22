@@ -5,13 +5,16 @@ import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/motion/Reveal";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { site, hours } from "@/lib/site";
+import { LegalContact } from "@/components/legal/LegalContact";
+import { site, hours, outlets, type Outlet } from "@/lib/site";
 import { img } from "@/lib/images";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Contact");
   return { title: t("meta.title"), description: t("meta.description") };
 }
+
+const addressLine = (o: Outlet) => [o.venue, o.street, o.city].filter(Boolean).join(", ");
 
 export default async function ContactPage() {
   const t = await getTranslations("Contact");
@@ -20,11 +23,11 @@ export default async function ContactPage() {
   const tiles = [
     { Icon: Phone, label: t("phone"), value: site.phone, href: site.phoneHref },
     { Icon: Mail, label: t("email"), value: site.email, href: `mailto:${site.email}` },
-    { Icon: MapPin, label: t("address"), value: `${site.address.street}, ${site.address.city}`, href: site.mapsHref },
+    ...outlets.map((o) => ({ Icon: MapPin, label: t("address"), value: addressLine(o), href: o.mapsHref })),
   ];
 
-  const mapQuery = encodeURIComponent(`${site.address.street}, ${site.address.city}`);
-  const mapEmbed = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+  const mapEmbed = (o: Outlet) =>
+    `https://www.google.com/maps?q=${encodeURIComponent(addressLine(o))}&output=embed`;
 
   return (
     <>
@@ -32,12 +35,12 @@ export default async function ContactPage() {
 
       {/* Quick-contact tiles */}
       <section className="py-10">
-        <div className="mx-auto grid max-w-7xl gap-4 px-5 sm:px-8 md:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-4 px-5 sm:px-8 md:grid-cols-2 lg:grid-cols-4">
           {tiles.map(({ Icon, label, value, href }) => (
-            <Reveal key={label}>
+            <Reveal key={value}>
               <a
                 href={href}
-                className="glass group flex items-center gap-4 rounded-2xl p-5 transition-colors hover:border-cyan/40"
+                className="glass group flex h-full items-center gap-4 rounded-2xl p-5 transition-colors hover:border-cyan/40"
               >
                 <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-cyan/10 text-cyan transition-shadow group-hover:shadow-[0_0_20px_-4px_var(--color-cyan)]">
                   <Icon className="size-5" />
@@ -46,7 +49,7 @@ export default async function ContactPage() {
                   <span className="block text-[11px] uppercase tracking-[0.2em] text-bone/45">
                     {label}
                   </span>
-                  <span className="block truncate text-bone">{value}</span>
+                  <span className="block text-bone">{value}</span>
                 </span>
               </a>
             </Reveal>
@@ -70,23 +73,23 @@ export default async function ContactPage() {
           <Reveal direction="left">
             <div className="flex h-full flex-col gap-6">
               {/* Interior with OPEN sign */}
-              <a
-                href={site.mapsHref}
-                className="group relative block h-56 overflow-hidden rounded-3xl border border-white/10"
-                aria-label={t("directions")}
-              >
+              <div className="group relative h-56 overflow-hidden rounded-3xl border border-white/10">
                 <Image src={img.interior2} alt="" fill sizes="(max-width:1024px) 100vw, 40vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
                 <span className="font-display absolute right-5 top-5 text-3xl text-cyan">
                   Open
                 </span>
-                <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-5">
-                  <span className="font-display text-2xl text-bone">{site.address.street}</span>
-                  <span className="inline-flex items-center gap-1 text-xs uppercase tracking-wider text-marigold">
-                    {t("directions")} <ExternalLink className="size-3" />
-                  </span>
+                <div className="absolute inset-x-0 bottom-0 space-y-2 p-5">
+                  {outlets.map((o) => (
+                    <a key={o.key} href={o.mapsHref} className="flex items-center justify-between gap-3">
+                      <span className="font-display text-lg text-bone sm:text-2xl">{o.street}</span>
+                      <span className="inline-flex shrink-0 items-center gap-1 text-xs uppercase tracking-wider text-marigold">
+                        {t("directions")} <ExternalLink className="size-3" />
+                      </span>
+                    </a>
+                  ))}
                 </div>
-              </a>
+              </div>
 
               {/* Hours */}
               <div className="glass rounded-3xl p-6 sm:p-7">
@@ -112,25 +115,40 @@ export default async function ContactPage() {
       {/* Live map embed */}
       <section className="pb-20 pt-2">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid gap-6 md:grid-cols-2">
+            {outlets.map((o) => (
+              <Reveal key={o.key}>
+                <div className="glass overflow-hidden rounded-3xl">
+                  <div className="flex items-center justify-between gap-3 border-b border-white/8 px-5 py-4 sm:px-6">
+                    <div className="min-w-0">
+                      <h2 className="font-display text-2xl text-bone">{o.street}</h2>
+                      <p className="font-mono text-[11px] uppercase tracking-wider text-bone/50">
+                        {[o.venue, o.city].filter(Boolean).join(" · ")}
+                      </p>
+                    </div>
+                    <a
+                      href={o.mapsHref}
+                      className="inline-flex shrink-0 items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-cyan transition-colors hover:text-bone"
+                    >
+                      {t("openMaps")} <ExternalLink className="size-3.5" />
+                    </a>
+                  </div>
+                  <iframe
+                    title={`${t("mapTitle")}: ${o.street}`}
+                    src={mapEmbed(o)}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                    className="h-[380px] w-full border-0"
+                  />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
           <Reveal>
-            <div className="glass overflow-hidden rounded-3xl">
-              <div className="flex items-center justify-between gap-3 border-b border-white/8 px-5 py-4 sm:px-6">
-                <h2 className="font-display text-2xl text-bone">{t("mapTitle")}</h2>
-                <a
-                  href={site.mapsHref}
-                  className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider text-cyan transition-colors hover:text-bone"
-                >
-                  {t("openMaps")} <ExternalLink className="size-3.5" />
-                </a>
-              </div>
-              <iframe
-                title={t("mapTitle")}
-                src={mapEmbed}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-                className="h-[380px] w-full border-0"
-              />
+            <div className="mt-6">
+              <LegalContact />
             </div>
           </Reveal>
         </div>
